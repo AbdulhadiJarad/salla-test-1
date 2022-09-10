@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
+   
 
 // Salla webhook
 Route::post('/webhook', WebhookController::class)->name('webhook');
+Route::get('sendtxtmail','MailController@txt_mail');
+Route::get('sendhtmlmail','MailController@html_mail');
+Route::get('sendattachedemail','MailController@attached_email');

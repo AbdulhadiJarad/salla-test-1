@@ -9,6 +9,7 @@ class WebhookController extends Controller
 {
     public function __invoke(WebhookRequest $request)
     {
+
         $event = explode('.', $request->get('event'));
         $component = $event[0];
         $action = Str::camel(Str::replace('.', '_', Str::after($request->get('event'), $component.'.')));

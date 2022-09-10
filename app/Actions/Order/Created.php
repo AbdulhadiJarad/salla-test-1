@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Actions\Order;
-
+use App\Http\Controllers\MailController;
 use App\Actions\BaseAction;
 
 /**
@@ -14,6 +14,6 @@ class Created extends BaseAction
 {
     public function handle()
     {
-        // you can do whatever you want
+        $result = (new MailController)->txt_mail();
     }
 }

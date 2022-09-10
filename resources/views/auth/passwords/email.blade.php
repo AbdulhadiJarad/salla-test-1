@@ -13,7 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
+<h1> Hello,  </h1>
 
+<p> Laravel MAIL System </p>
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
 
